@@ -14,6 +14,6 @@
 3️⃣ **Tercer punto** – [Explicación del tercer punto]  
 
 📌 **Enlace a WEB con Bootstrap:**  
-<script src="https://victormedel06.github.io/Bootstrap/index.html"></script>  
+🌐 Visita la **[web](https://victormedel06.github.io/Bootstrap/index.html)** para ver el proyecto en acción.  
 
 🔥 ¡Empieza a construir interfaces increíbles con Bootstrap! 🚀
