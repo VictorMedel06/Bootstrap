@@ -1,0 +1,153 @@
+/* --- ESTILOS GENERALES --- */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Fondo oscuro para un look moderno */
+  color: #ffffff; /* Texto en blanco para contraste */
+  line-height: 1.6;
+}
+
+/* Fondo animado detrás del título */
+header {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #a54f30, #ff9a00, #ffd700);
+  background-size: 200% 200%;
+  animation: move-bg 6s ease infinite;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+header h1, header p {
+  z-index: 1;
+  position: relative;
+}
+
+/* Animación del fondo */
+@keyframes move-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- CARRUSEL --- */
+.carousel-item img {
+  max-height: 500px;
+  object-fit: cover; /* Mantener proporciones sin deformar */
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para contraste */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+main {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+main h2 {
+  color: #ff9a00;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+main h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #ff6f00;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+main p {
+  font-size: 1.2em;
+  text-align: justify;
+  color: #cccccc;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* --- TARJETAS --- */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5em;
+  color: #ff9a00;
+}
+
+.card-text {
+  color: #dddddd;
+  font-size: 1.1em;
+}
+
+.btn-warning {
+  background-color: #ff9a00;
+  border: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #ff6f00;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+  background: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #ff9a00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
