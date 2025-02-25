@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA: La Liga de las Estrellas</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="bg-dark text-white">
+  <!-- Cabecera -->
+  <header class="text-center py-5 bg-gradient position-relative">
+    <!-- Contenedor de las partículas -->
+    <div id="particles-js" class="position-absolute top-0 start-0 w-100 h-100"></div>
+  
+    <h1 class="display-4 fw-bold position-relative">NBA: La Liga de las Estrellas</h1>
+    <p class="position-relative">Descubre todo sobre la liga de baloncesto más emocionante del mundo</p>
+  </header>
+  
+  
+
+  <!-- Contenido principal -->
+  <main class="container text-center my-5">
+    <h2 class="text-warning">Explora el Universo de la NBA</h2>
+    <p class="text-muted">Desde su fundación en 1946 hasta las jugadas más emocionantes de la actualidad. La NBA es más que baloncesto, es espectáculo, cultura y pasión.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100 border border-warning">
+          <img src="imagenes/hq720.jpg" class="card-img-top" alt="Historia" style="height: 180px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Historia</h5>
+            <p class="card-text">Descubre los momentos que hicieron grande a la NBA.</p>
+            <a href="historiaBasket.html" class="btn btn-warning">Explorar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100 border border-warning">
+          <img src="imagenes/nba_top75-rank_16x9_800x450.jpg" class="card-img-top" alt="Jugadores" style="height: 180px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Jugadores</h5>
+            <p class="card-text">Leyendas que dejaron su marca en el deporte.</p>
+            <a href="judadores.html" class="btn btn-warning">Explorar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100 border border-warning">
+          <img src="imagenes/nba-logo-9ubpkhw46prlmrc1.jpg" class="card-img-top" alt="Equipos" style="height: 180px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Equipos</h5>
+            <p class="card-text">Los equipos más icónicos de la liga.</p>
+            <a href="equipos.html" class="btn btn-warning" onclick="cargarPaginaEquipos('equipos.html'); return false;">Conocer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+ 
+
+  <!-- Script de Particles.js directamente en el HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 115,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#00000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+  
+<div id="contenido"></div>
+
+<script>
+    function cargarPagina(url) {
+        const contenido = document.getElementById("contenido");
+        contenido.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+        contenido.style.opacity = 0;
+        contenido.style.transform = "scale(0.9)";
+        setTimeout(() => {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    contenido.innerHTML = data;
+                    contenido.style.transition = "opacity 1s ease-in, transform 1s ease-in";
+                    contenido.style.opacity = 1;
+                    contenido.style.transform = "scale(1)";
+                });
+        }, 1000);
+    }
+
+    function cargarPaginaEquipos(url) {
+        const contenido = document.getElementById("contenido");
+        contenido.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+        contenido.style.opacity = 0;
+        contenido.style.transform = "scale(0.9)";
+        setTimeout(() => {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    contenido.innerHTML = data;
+                    contenido.style.transition = "opacity 1s ease-in, transform 1s ease-in";
+                    contenido.style.opacity = 1;
+                    contenido.style.transform = "scale(1)";
+                });
+        }, 1000);
+    }
+</script>
+
+  
+</body>
+</html>

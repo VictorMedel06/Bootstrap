@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia del Baloncesto</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to right, #1e3c72, #2a5298); /* NBA-themed gradient */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0b3d91; /* Dark blue */
+      color: #ffcb05; /* Yellow */
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #ffcb05; /* Yellow */
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ff6347; /* Tomato */
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section {
+      background: #fff;
+      color: #333;
+      padding: 30px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    section:hover {
+      transform: translateY(-5px);
+    }
+    h2, h3 {
+      color: #0b3d91; /* Dark blue */
+      border-bottom: 2px solid #ffcb05; /* Yellow */
+      padding-bottom: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background: #0b3d91; /* Dark blue */
+      color: #ffcb05; /* Yellow */
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .carousel {
+      position: relative;
+      max-width: 100%;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .carousel-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #ffcb05; /* Yellow */
+      padding: 10px;
+      cursor: pointer;
+    }
+    .collapsible {
+      background-color: #0b3d91; /* Dark blue */
+      color: #ffcb05; /* Yellow */
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+      margin-bottom: 10px;
+    }
+    .info-link {
+      display: block;
+      margin-top: 10px;
+      color: #ffcb05; /* Yellow */
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .info-link:hover {
+      text-decoration: underline;
+    }
+    .carousel-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ffcb05; /* Yellow */
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+      display: none; /* Hide all captions initially */
+    }
+    .carousel-item.active .carousel-caption {
+      display: block; /* Show only the active caption */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Historia del Baloncesto</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historiaBasket.html">Historia</a></li>
+        <li><a href="jugadores.html">Jugadores</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>El origen del baloncesto</h2>
+      <p>El baloncesto fue inventado en 1891 por James Naismith en Springfield, Massachusetts. Su objetivo era crear un deporte menos violento que el fútbol americano.</p>
+      <button class="collapsible">Evolución</button>
+      <div class="content">
+        <p>Desde sus inicios, el baloncesto ha crecido hasta convertirse en uno de los deportes más populares del mundo. En 1936, se convirtió en un deporte olímpico. La NBA, fundada en 1946, ha sido fundamental en su popularidad global, destacando figuras como Bill Russell, Larry Bird, Magic Johnson, Michael Jordan, Kobe Bryant, y LeBron James.</p>
+        <div class="gif-container">
+          <iframe width="600" height="500" src="/videomedia/b79083b71d515ce4e67c7d54b8fe43ed.gif" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <a class="info-link" onclick="toggleContent(this)">+ Info</a>
+      <button class="collapsible">Historia de la NBA</button>
+      <div class="content">
+        <p>La NBA (National Basketball Association) fue fundada en Nueva York el 6 de junio de 1946 como la Basketball Association of America (BAA). En 1949, se fusionó con la National Basketball League (NBL) para formar la NBA. Desde entonces, la NBA ha crecido hasta convertirse en la principal liga de baloncesto profesional del mundo, con jugadores de renombre internacional y una gran base de aficionados.</p>
+        <div class="video-container">
+          <iframe width="560" height="315" src="/videomedia/youtube_2YvFP9vq9SM_1920x1080_h264.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+      </div>
+      <a class="info-link" onclick="toggleContent(this)">+ Info</a>
+      <h3>Momentos Clave</h3>
+      <div class="carousel">
+        <div class="carousel-item active">
+          <img src="imagenes/c1.jpg" alt="1956: Bill Russell se une a los Boston Celtics" class="active">
+          <div class="carousel-caption">1956: Bill Russell se une a los Boston Celtics</div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/c5.jpg" alt="1980s: La rivalidad entre Larry Bird y Magic Johnson">
+          <div class="carousel-caption">1980s: La rivalidad entre Larry Bird y Magic Johnson</div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/c4.avif" alt="1992: El 'Dream Team' de Estados Unidos gana el oro en los Juegos Olímpicos de Barcelona">
+          <div class="carousel-caption">1992: El 'Dream Team' de Estados Unidos gana el oro en los Juegos Olímpicos de Barcelona</div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/c3.jpg" alt="1996: La NBA celebra su 50 aniversario y nombra a los 50 mejores jugadores de la historia">
+          <div class="carousel-caption">1996: La NBA celebra su 50 aniversario y nombra a los 50 mejores jugadores de la historia</div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/c2.jpg" alt="2000s: La era de Kobe Bryant y Shaquille O'Neal con los Lakers, y el ascenso de LeBron James">
+          <div class="carousel-caption">2000s: La era de Kobe Bryant y Shaquille O'Neal con los Lakers, y el ascenso de LeBron James</div>
+        </div>
+        <div class="carousel-buttons">
+          <button id="prevBtn">❮</button>
+          <button id="nextBtn">❯</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 - Sitio web de Baloncesto</p>
+  </footer>
+  <script>
+    function toggleContent(link) {
+      const content = link.previousElementSibling;
+      const button = content.previousElementSibling;
+      button.classList.toggle('active');
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+
+    const images = document.querySelectorAll('.carousel-item img');
+    const captions = document.querySelectorAll('.carousel-caption');
+    let currentIndex = 0;
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      images[currentIndex].classList.remove('active');
+      captions[currentIndex].style.display = 'none';
+      currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+      images[currentIndex].classList.add('active');
+      captions[currentIndex].style.display = 'block';
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      images[currentIndex].classList.remove('active');
+      captions[currentIndex].style.display = 'none';
+      currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+      images[currentIndex].classList.add('active');
+      captions[currentIndex].style.display = 'block';
+    });
+
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach((collapsible) => {
+      collapsible.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

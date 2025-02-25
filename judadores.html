@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mejores Jugadores de la NBA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Cambiado a blanco */
+        }
+        header {
+            background-color: #004080; /* Cambiado a azul oscuro */
+            color: #ffffff; /* Cambiado a blanco */
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #004080; /* Cambiado a azul oscuro */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #f9f9f9; /* Cambiado a gris claro */
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #cccccc; /* Cambiado a gris */
+        }
+        tr:nth-child(even) {
+            background-color: #e6f2ff; /* Cambiado a azul muy claro */
+        }
+        .striped-table {
+            background-color: #e6f2ff; /* Cambiado a azul muy claro */
+            border: 1px solid #004080; /* Cambiado a azul oscuro */
+        }
+        #score {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #004080; /* Azul oscuro */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mejores Jugadores de la NBA</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Jugadores Actuales</h2>
+            <table class="striped-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Equipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LeBron James</td>
+                        <td>Los Angeles Lakers</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Durant</td>
+                        <td>Brooklyn Nets</td>
+                    </tr>
+                    <tr>
+                        <td>Stephen Curry</td>
+                        <td>Golden State Warriors</td>
+                    </tr>
+                    <tr>
+                        <td>Giannis Antetokounmpo</td>
+                        <td>Milwaukee Bucks</td>
+                    </tr>
+                    <tr>
+                        <td>Luka Dončić</td>
+                        <td>Dallas Mavericks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Jugadores Históricos</h2>
+            <table class="striped-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Equipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Michael Jordan</td>
+                        <td>Chicago Bulls</td>
+                    </tr>
+                    <tr>
+                        <td>Magic Johnson</td>
+                        <td>Los Angeles Lakers</td>
+                    </tr>
+                    <tr>
+                        <td>Larry Bird</td>
+                        <td>Boston Celtics</td>
+                    </tr>
+                    <tr>
+                        <td>Kareem Abdul-Jabbar</td>
+                        <td>Los Angeles Lakers</td>
+                    </tr>
+                    <tr>
+                        <td>Wilt Chamberlain</td>
+                        <td>Los Angeles Lakers</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Formulario de Preguntas sobre la NBA</h2>
+            <form id="nbaQuizForm">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="question1">¿Quién es el máximo anotador en la historia de la NBA?</label><br>
+                <input type="text" id="question1" name="question1" required><br><br>
+                
+                <label for="question2">¿Cuántos campeonatos ha ganado Michael Jordan?</label><br>
+                <input type="number" id="question2" name="question2" required><br><br>
+                
+                <label for="question3">¿En qué año se fundó la NBA?</label><br>
+                <input type="number" id="question3" name="question3" required><br><br>
+                
+                <label for="question4">¿Cuál es el equipo con más campeonatos en la historia de la NBA?</label><br>
+                <input type="text" id="question4" name="question4" required><br><br>
+                
+                <input type="submit" value="Enviar">
+            </form>
+            <p id="score"></p>
+        </section>
+    </main>
+    <script>
+        document.getElementById('nbaQuizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const answers = {
+                question1: 'Kareem Abdul-Jabbar',
+                question2: 6,
+                question3: 1946,
+                question4: 'Boston Celtics'
+            };
+            
+            let score = 0;
+            const form = event.target;
+            
+            if (form.question1.value.trim().toLowerCase() === answers.question1.toLowerCase()) {
+                score++;
+            }
+            if (parseInt(form.question2.value) === answers.question2) {
+                score++;
+            }
+            if (parseInt(form.question3.value) === answers.question3) {
+                score++;
+            }
+            if (form.question4.value.trim().toLowerCase() === answers.question4.toLowerCase()) {
+                score++;
+            }
+            
+            document.getElementById('score').innerText = `Tu puntuación es: ${score} de 4`;
+        });
+    </script>
+</body>
+</html>
